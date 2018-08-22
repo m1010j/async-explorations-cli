@@ -1,3 +1,5 @@
+const { Worker } = require('worker_threads');
+
 const syncFib = require('./fib_functions/sync.js');
 const syncBusyFib = require('./fib_functions/sync_busy.js');
 const syncMemoFib = require('./fib_functions/sync_memo.js');
@@ -47,6 +49,13 @@ if (fcnStrs.includes(fcnStr)) {
           ` You entered: ${nStr}.`
       );
     }
+  } else if (withWorker) {
+    worker = new Worker(`./workers/sync.js`);
+    worker.postMessage({ n, fcnStr });
+    worker.onmessage = function(e) {
+      displayResult(n, e.data.duration, e.data.result);
+      worker.terminate();
+    };
   } else {
     console.log(`Invalid option: ${fourthArg}`);
   }
