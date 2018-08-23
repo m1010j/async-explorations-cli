@@ -1,8 +1,8 @@
-# async-explore
+# async-explorations-cli
 
-`async-explore` is a command-line tool to benchmark asynchronous recursive functions in Node.js. It is a companion to [Explorations in Asynchronicity](https://github.com/m1010j/async-explorations).
+`async-explorations-cli` is a command-line tool to benchmark asynchronous recursive functions in Node.js. It is a companion to [Explorations in Asynchronicity](https://github.com/m1010j/async-explorations).
 
-Benchmarks are run using experimental [worker threads](https://nodejs.org/api/worker_threads.html). As a result, `async-explore` requires Node.js v10.5.0 or higher.
+Benchmarks are run using experimental [worker threads](https://nodejs.org/api/worker_threads.html). As a result, `async-explorations-cli` requires Node.js v10.5.0 or higher.
 
 ### Overview
 
@@ -94,12 +94,12 @@ async function asyncMemoFib(n, memo = {}) {
 ### Installation
 
 ```bash
-npm install -g async-explore
+npm install -g async-explorations-cli
 ```
 
 ### How to use
 
-`async-explore` requires two arguments:
+The command-line-tool is called `async-explore`. It requires two arguments:
 1. The Fibonacci function to benchmark.
     - This must be one of `syncFib`, `asyncFib`, `syncBusyFib`, `asyncBusyFib`, `syncMemoFib`, and `asyncMemoFib`.
 1. A positive integer that is the arguemnt to the Fibonacci function.
