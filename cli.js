@@ -1,3 +1,6 @@
+#!/bin/sh 
+":" //# comment; exec /usr/bin/env node --experimental-worker "$0" "$@"
+
 const {
   Worker,
   isMainThread,
@@ -17,7 +20,7 @@ const displayResult = require('./util/display_result.js');
 
 if (isMainThread) {
   const fourthArg = process.argv[4];
-  const noWorker = ['-nw', '--mode=no-worker'].includes(fourthArg);
+  const withoutWorker = ['-nw', '--mode=no-worker'].includes(fourthArg);
   const withWorker = !fourthArg || ['-w', '--mode=worker'].includes(fourthArg);
 
   const fcnStr = process.argv[2];
@@ -37,7 +40,7 @@ if (isMainThread) {
     const fcn = eval(fcnStr);
     const nStr = parseInt(process.argv[3]);
     const n = parseInt(nStr);
-    if (noWorker) {
+    if (withoutWorker) {
       if (n > 0) {
         if (fcnStr[0] === 's') {
           spinner.start();

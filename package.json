@@ -1,0 +1,30 @@
+{
+  "name": "async-explore",
+  "version": "1.0.0",
+  "description": "A command-line tool for benchmarking asynchronous recursive functions",
+  "main": "cli.js",
+  "engines": {
+    "node": ">=10.5.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/m1010j/async-explore.git"
+  },
+  "author": "Matthias Jenny",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/m1010j/async-explore/issues"
+  },
+  "homepage": "https://github.com/m1010j/async-explore#readme",
+  "preferGlobal": true,
+  "bin": {
+    "async-explore": "./cli.js"
+  },
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "ora": "^3.0.0"
+  }
+}
