@@ -108,7 +108,7 @@ To turn off the use of worker threads, run `async-explore` with an optional `--m
 
 **Example**
 
-![asyncFib 28 preview gif](./media/preview.gif)
+![asyncFib 28 preview gif](https://raw.githubusercontent.com/m1010j/async-explorations-cli/master/media/preview.gif)
 
 
 ### [Contributing](./CONTRIBUTING.md)
