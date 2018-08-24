@@ -104,11 +104,11 @@ The command-line-tool is called `async-explore`. It requires two arguments:
     - This must be one of `syncFib`, `asyncFib`, `syncBusyFib`, `asyncBusyFib`, `syncMemoFib`, and `asyncMemoFib`.
 1. A positive integer that is the arguemnt to the Fibonacci function.
 
+To turn off the use of worker threads, run `async-explore` with an optional `--mode=no-worker` or `-nw` flag.
+
 **Example**
 
 ![asyncFib 28 preview gif](./media/preview.gif)
-
-To turn off the use of worker threads, run `async-explore` with an optional `--mode=no-worker` or `-nw` flag.
 
 
 ### [Contributing](./CONTRIBUTING.md)
