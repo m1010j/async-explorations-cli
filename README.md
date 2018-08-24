@@ -106,11 +106,7 @@ The command-line-tool is called `async-explore`. It requires two arguments:
 
 **Example**
 
-```
-$ async-explore syncFib 1
-The 1st Fibonacci number is 1.
-It took 0 milliseconds to calculate this.
-```
+![asyncFib 28 preview gif](./media/preview.gif)
 
 To turn off the use of worker threads, run `async-explore` with an optional `--mode=no-worker` or `-nw` flag.
 
